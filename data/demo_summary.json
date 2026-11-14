@@ -1,0 +1,55 @@
+{
+  "generator": "behavioral-v2",
+  "seed": 42,
+  "requested_rows": 12000,
+  "fraud_initiation_parameter": 0.02,
+  "realized_fraud_fraction": 0.02925,
+  "first_timestamp": "2025-01-01 00:22:18+00:00",
+  "last_timestamp": "2025-03-01 23:56:51+00:00",
+  "unique_entities": 619,
+  "transaction_types": {
+    "purchase": 6601,
+    "transfer": 3558,
+    "bill_payment": 1465,
+    "refund": 376
+  },
+  "scenarios": {
+    "ordinary": 9803,
+    "recurring_payment": 1423,
+    "legitimate_large_payment": 276,
+    "legitimate_collection": 147,
+    "layering_ring": 132,
+    "account_takeover": 90,
+    "mule_cashout": 49,
+    "mule_funnel": 49,
+    "low_value_testing": 31
+  },
+  "partitions": {
+    "train": {
+      "rows": 7200,
+      "fraud": 176
+    },
+    "validation": {
+      "rows": 2400,
+      "fraud": 86
+    },
+    "test": {
+      "rows": 2400,
+      "fraud": 89
+    }
+  },
+  "amount_quantiles": {
+    "0": {
+      "0.1": 12.546,
+      "0.5": 66.38,
+      "0.9": 269.202,
+      "0.99": 1302.6740000000075
+    },
+    "1": {
+      "0.1": 10.54,
+      "0.5": 139.5,
+      "0.9": 405.83,
+      "0.99": 942.135
+    }
+  }
+}

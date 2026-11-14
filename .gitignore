@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.local-runtime.json
+.env
+.env.*
+
+# Only the reviewed synthetic demonstration is published.
+data/*
+!data/demo.csv
+!data/demo_summary.json
+runs/*
+!runs/demo/
+*.joblib
+*.pt
+!runs/demo/*.joblib
+!runs/demo/*.pt

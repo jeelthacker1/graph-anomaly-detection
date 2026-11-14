@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph-anomaly-detection"
+version = "0.1.0"
+description = "Causal transaction graphs, fraud benchmarks, and investigation dashboard"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0,<3", "pandas>=2.2,<3", "scikit-learn>=1.6,<2",
+  "networkx>=3.4,<4", "joblib>=1.4,<2", "threadpoolctl>=3.5,<4", "torch>=2.6,<3",
+  "torch-geometric>=2.6,<3", "streamlit>=1.53,<2", "plotly>=6,<7"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.11"]
+
+[project.scripts]
+fraudgraph = "fraudgraph.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["fraudgraph*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110

@@ -1,0 +1,69 @@
+{
+  "format_version": 1,
+  "history": 12,
+  "hidden": 48,
+  "features": [
+    "log_amount",
+    "hour_sin",
+    "hour_cos",
+    "weekday_sin",
+    "weekday_cos",
+    "source_count",
+    "target_count",
+    "source_degree",
+    "target_degree",
+    "shared_neighbors",
+    "pair_count",
+    "source_mean_amount",
+    "target_mean_amount",
+    "source_amount_ratio",
+    "source_recent_hour",
+    "target_recent_hour",
+    "source_gap_hours",
+    "target_gap_hours",
+    "source_is_new",
+    "target_is_new",
+    "self_transfer"
+  ],
+  "thresholds": {
+    "baseline_tabular": 0.7466580271720886,
+    "baseline_graph_features": 0.6525999675334039,
+    "isolation_forest": 0.6018307701542134,
+    "mlp_ablation": 0.8345769047737122,
+    "graphsage": 0.5882964730262756
+  },
+  "champion": "baseline_graph_features",
+  "models": {
+    "baseline_tabular": {
+      "columns": 5,
+      "kind": "sklearn"
+    },
+    "baseline_graph_features": {
+      "columns": 21,
+      "kind": "sklearn"
+    },
+    "isolation_forest": {
+      "kind": "isolation",
+      "columns": 21
+    },
+    "mlp_ablation": {
+      "kind": "neural",
+      "use_graph": false
+    },
+    "graphsage": {
+      "kind": "neural",
+      "use_graph": true
+    }
+  },
+  "seed": 42,
+  "source_sha256": "0430eb91d6aaa417bddc8433dd7b2ac29fd3ca788a34c67ee0f3f57c782668bb",
+  "python": "3.13.3",
+  "versions": {
+    "numpy": "2.3.0",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.9.1",
+    "torch": "2.15.0",
+    "torch-geometric": "2.8.1",
+    "networkx": "3.7"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "baseline_tabular": [
+    {
+      "candidate": "logistic_C=0.1",
+      "validation_ap": 0.05817960485299069
+    },
+    {
+      "candidate": "logistic_C=1.0",
+      "validation_ap": 0.0581619413329916
+    },
+    {
+      "candidate": "logistic_C=10.0",
+      "validation_ap": 0.05807204122911191
+    },
+    {
+      "candidate": "boosted_leaves=7",
+      "validation_ap": 0.049665642487266654
+    },
+    {
+      "candidate": "boosted_leaves=15",
+      "validation_ap": 0.04353390843317734
+    },
+    {
+      "candidate": "boosted_leaves=31",
+      "validation_ap": 0.041988438862375715
+    }
+  ],
+  "baseline_graph_features": [
+    {
+      "candidate": "logistic_C=0.1",
+      "validation_ap": 0.3188848794878861
+    },
+    {
+      "candidate": "logistic_C=1.0",
+      "validation_ap": 0.31821194507280004
+    },
+    {
+      "candidate": "logistic_C=10.0",
+      "validation_ap": 0.3184297884679128
+    },
+    {
+      "candidate": "boosted_leaves=7",
+      "validation_ap": 0.5017545719215846
+    },
+    {
+      "candidate": "boosted_leaves=15",
+      "validation_ap": 0.5285177227944992
+    },
+    {
+      "candidate": "boosted_leaves=31",
+      "validation_ap": 0.49985982837751175
+    }
+  ]
+}

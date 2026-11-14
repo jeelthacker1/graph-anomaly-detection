@@ -1,0 +1,1182 @@
+{
+  "seed": 42,
+  "target_fpr": 0.01,
+  "rows": 12000,
+  "edges": 239052,
+  "feature_build_seconds": 32.74563620000026,
+  "models": {
+    "baseline_tabular": {
+      "validation": {
+        "n": 2400,
+        "positives": 86,
+        "prevalence": 0.035833333333333335,
+        "average_precision": 0.05817960485299069,
+        "roc_auc": 0.5767170509135494,
+        "recall_at_validation_threshold": 0.05813953488372093,
+        "observed_fpr": 0.007778738115816767,
+        "precision": 0.21739130434782608,
+        "threshold": 0.7466580271720886,
+        "confusion": {
+          "tn": 2296,
+          "fp": 18,
+          "fn": 81,
+          "tp": 5
+        }
+      },
+      "test": {
+        "n": 2400,
+        "positives": 89,
+        "prevalence": 0.037083333333333336,
+        "average_precision": 0.039758328929217795,
+        "roc_auc": 0.4875558515939886,
+        "recall_at_validation_threshold": 0.011235955056179775,
+        "observed_fpr": 0.01125054089138901,
+        "precision": 0.037037037037037035,
+        "threshold": 0.7466580271720886,
+        "confusion": {
+          "tn": 2285,
+          "fp": 26,
+          "fn": 88,
+          "tp": 1
+        },
+        "ap_iid_bootstrap_95ci": [
+          0.029128370623721936,
+          0.05427699847822221
+        ]
+      },
+      "test_any_unseen_account": {
+        "n": 288,
+        "positives": 14,
+        "prevalence": 0.04861111111111111,
+        "average_precision": 0.05172444880951102,
+        "roc_auc": 0.4911366006256517,
+        "recall_at_validation_threshold": 0.0,
+        "observed_fpr": 0.025547445255474453,
+        "precision": 0.0,
+        "threshold": 0.7466580271720886,
+        "confusion": {
+          "tn": 267,
+          "fp": 7,
+          "fn": 14,
+          "tp": 0
+        }
+      },
+      "test_both_unseen_accounts": {
+        "n": 7,
+        "positives": 2,
+        "prevalence": 0.2857142857142857,
+        "average_precision": 0.7,
+        "roc_auc": 0.7,
+        "recall_at_validation_threshold": 0.0,
+        "observed_fpr": 0.0,
+        "precision": 0.0,
+        "threshold": 0.7466580271720886,
+        "confusion": {
+          "tn": 5,
+          "fp": 0,
+          "fn": 2,
+          "tp": 0
+        }
+      },
+      "cpu_full_history_inference_seconds": 0.004238799999711773,
+      "cpu_amortized_ms_per_row": 0.00035323333330931445,
+      "test_scenarios": {
+        "account_takeover": {
+          "n": 28,
+          "positives": 28,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.03571428571428571,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.7466580271720886,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 27,
+            "tp": 1
+          }
+        },
+        "layering_ring": {
+          "n": 12,
+          "positives": 12,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.7466580271720886,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 12,
+            "tp": 0
+          }
+        },
+        "legitimate_collection": {
+          "n": 18,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.0,
+          "precision": 0.0,
+          "threshold": 0.7466580271720886,
+          "confusion": {
+            "tn": 18,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "legitimate_large_payment": {
+          "n": 52,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.15384615384615385,
+          "precision": 0.0,
+          "threshold": 0.7466580271720886,
+          "confusion": {
+            "tn": 44,
+            "fp": 8,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "low_value_testing": {
+          "n": 13,
+          "positives": 13,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.7466580271720886,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 13,
+            "tp": 0
+          }
+        },
+        "mule_cashout": {
+          "n": 18,
+          "positives": 18,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.7466580271720886,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 18,
+            "tp": 0
+          }
+        },
+        "mule_funnel": {
+          "n": 18,
+          "positives": 18,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.7466580271720886,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 18,
+            "tp": 0
+          }
+        },
+        "ordinary": {
+          "n": 1974,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.008611955420466059,
+          "precision": 0.0,
+          "threshold": 0.7466580271720886,
+          "confusion": {
+            "tn": 1957,
+            "fp": 17,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "recurring_payment": {
+          "n": 267,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.003745318352059925,
+          "precision": 0.0,
+          "threshold": 0.7466580271720886,
+          "confusion": {
+            "tn": 266,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          }
+        }
+      }
+    },
+    "baseline_graph_features": {
+      "validation": {
+        "n": 2400,
+        "positives": 86,
+        "prevalence": 0.035833333333333335,
+        "average_precision": 0.5285177227944992,
+        "roc_auc": 0.912268095113666,
+        "recall_at_validation_threshold": 0.4186046511627907,
+        "observed_fpr": 0.006914433880726016,
+        "precision": 0.6923076923076923,
+        "threshold": 0.6525999675334039,
+        "confusion": {
+          "tn": 2298,
+          "fp": 16,
+          "fn": 50,
+          "tp": 36
+        }
+      },
+      "test": {
+        "n": 2400,
+        "positives": 89,
+        "prevalence": 0.037083333333333336,
+        "average_precision": 0.37727184508230954,
+        "roc_auc": 0.8726267630628308,
+        "recall_at_validation_threshold": 0.25842696629213485,
+        "observed_fpr": 0.006923409779316313,
+        "precision": 0.5897435897435898,
+        "threshold": 0.6525999675334039,
+        "confusion": {
+          "tn": 2295,
+          "fp": 16,
+          "fn": 66,
+          "tp": 23
+        },
+        "ap_iid_bootstrap_95ci": [
+          0.27619005170822025,
+          0.4798134980156237
+        ]
+      },
+      "test_any_unseen_account": {
+        "n": 288,
+        "positives": 14,
+        "prevalence": 0.04861111111111111,
+        "average_precision": 0.2980411616084774,
+        "roc_auc": 0.7236704900938478,
+        "recall_at_validation_threshold": 0.21428571428571427,
+        "observed_fpr": 0.0072992700729927005,
+        "precision": 0.6,
+        "threshold": 0.6525999675334039,
+        "confusion": {
+          "tn": 272,
+          "fp": 2,
+          "fn": 11,
+          "tp": 3
+        }
+      },
+      "test_both_unseen_accounts": {
+        "n": 7,
+        "positives": 2,
+        "prevalence": 0.2857142857142857,
+        "average_precision": 0.39285714285714285,
+        "roc_auc": 0.4,
+        "recall_at_validation_threshold": 0.0,
+        "observed_fpr": 0.0,
+        "precision": 0.0,
+        "threshold": 0.6525999675334039,
+        "confusion": {
+          "tn": 5,
+          "fp": 0,
+          "fn": 2,
+          "tp": 0
+        }
+      },
+      "cpu_full_history_inference_seconds": 0.264584499999728,
+      "cpu_amortized_ms_per_row": 0.022048708333310667,
+      "test_scenarios": {
+        "account_takeover": {
+          "n": 28,
+          "positives": 28,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.03571428571428571,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.6525999675334039,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 27,
+            "tp": 1
+          }
+        },
+        "layering_ring": {
+          "n": 12,
+          "positives": 12,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.6666666666666666,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.6525999675334039,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 4,
+            "tp": 8
+          }
+        },
+        "legitimate_collection": {
+          "n": 18,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.0,
+          "precision": 0.0,
+          "threshold": 0.6525999675334039,
+          "confusion": {
+            "tn": 18,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "legitimate_large_payment": {
+          "n": 52,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.019230769230769232,
+          "precision": 0.0,
+          "threshold": 0.6525999675334039,
+          "confusion": {
+            "tn": 51,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "low_value_testing": {
+          "n": 13,
+          "positives": 13,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.15384615384615385,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.6525999675334039,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 11,
+            "tp": 2
+          }
+        },
+        "mule_cashout": {
+          "n": 18,
+          "positives": 18,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.6666666666666666,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.6525999675334039,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 6,
+            "tp": 12
+          }
+        },
+        "mule_funnel": {
+          "n": 18,
+          "positives": 18,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.6525999675334039,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 18,
+            "tp": 0
+          }
+        },
+        "ordinary": {
+          "n": 1974,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.0070921985815602835,
+          "precision": 0.0,
+          "threshold": 0.6525999675334039,
+          "confusion": {
+            "tn": 1960,
+            "fp": 14,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "recurring_payment": {
+          "n": 267,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.003745318352059925,
+          "precision": 0.0,
+          "threshold": 0.6525999675334039,
+          "confusion": {
+            "tn": 266,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          }
+        }
+      }
+    },
+    "isolation_forest": {
+      "validation": {
+        "n": 2400,
+        "positives": 86,
+        "prevalence": 0.035833333333333335,
+        "average_precision": 0.04379726360702465,
+        "roc_auc": 0.575239693674499,
+        "recall_at_validation_threshold": 0.011627906976744186,
+        "observed_fpr": 0.0056179775280898875,
+        "precision": 0.07142857142857142,
+        "threshold": 0.6018307701542134,
+        "confusion": {
+          "tn": 2301,
+          "fp": 13,
+          "fn": 85,
+          "tp": 1
+        }
+      },
+      "test": {
+        "n": 2400,
+        "positives": 89,
+        "prevalence": 0.037083333333333336,
+        "average_precision": 0.043317935703131166,
+        "roc_auc": 0.451572596132809,
+        "recall_at_validation_threshold": 0.011235955056179775,
+        "observed_fpr": 0.008221549112938122,
+        "precision": 0.05,
+        "threshold": 0.6018307701542134,
+        "confusion": {
+          "tn": 2292,
+          "fp": 19,
+          "fn": 88,
+          "tp": 1
+        },
+        "ap_iid_bootstrap_95ci": [
+          0.026615790143042165,
+          0.07114885676900606
+        ]
+      },
+      "test_any_unseen_account": {
+        "n": 288,
+        "positives": 14,
+        "prevalence": 0.04861111111111111,
+        "average_precision": 0.14653103261923003,
+        "roc_auc": 0.6681438998957248,
+        "recall_at_validation_threshold": 0.07142857142857142,
+        "observed_fpr": 0.0364963503649635,
+        "precision": 0.09090909090909091,
+        "threshold": 0.6018307701542134,
+        "confusion": {
+          "tn": 264,
+          "fp": 10,
+          "fn": 13,
+          "tp": 1
+        }
+      },
+      "test_both_unseen_accounts": {
+        "n": 7,
+        "positives": 2,
+        "prevalence": 0.2857142857142857,
+        "average_precision": 0.7,
+        "roc_auc": 0.7,
+        "recall_at_validation_threshold": 0.5,
+        "observed_fpr": 0.0,
+        "precision": 1.0,
+        "threshold": 0.6018307701542134,
+        "confusion": {
+          "tn": 5,
+          "fp": 0,
+          "fn": 1,
+          "tp": 1
+        }
+      },
+      "cpu_full_history_inference_seconds": 0.4053548000001683,
+      "cpu_amortized_ms_per_row": 0.033779566666680694,
+      "test_scenarios": {
+        "account_takeover": {
+          "n": 28,
+          "positives": 28,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.6018307701542134,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 28,
+            "tp": 0
+          }
+        },
+        "layering_ring": {
+          "n": 12,
+          "positives": 12,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.6018307701542134,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 12,
+            "tp": 0
+          }
+        },
+        "legitimate_collection": {
+          "n": 18,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.0,
+          "precision": 0.0,
+          "threshold": 0.6018307701542134,
+          "confusion": {
+            "tn": 18,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "legitimate_large_payment": {
+          "n": 52,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.07692307692307693,
+          "precision": 0.0,
+          "threshold": 0.6018307701542134,
+          "confusion": {
+            "tn": 48,
+            "fp": 4,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "low_value_testing": {
+          "n": 13,
+          "positives": 13,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.6018307701542134,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 13,
+            "tp": 0
+          }
+        },
+        "mule_cashout": {
+          "n": 18,
+          "positives": 18,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.6018307701542134,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 18,
+            "tp": 0
+          }
+        },
+        "mule_funnel": {
+          "n": 18,
+          "positives": 18,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.05555555555555555,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.6018307701542134,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 17,
+            "tp": 1
+          }
+        },
+        "ordinary": {
+          "n": 1974,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.006585612968591692,
+          "precision": 0.0,
+          "threshold": 0.6018307701542134,
+          "confusion": {
+            "tn": 1961,
+            "fp": 13,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "recurring_payment": {
+          "n": 267,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.00749063670411985,
+          "precision": 0.0,
+          "threshold": 0.6018307701542134,
+          "confusion": {
+            "tn": 265,
+            "fp": 2,
+            "fn": 0,
+            "tp": 0
+          }
+        }
+      }
+    },
+    "mlp_ablation": {
+      "validation": {
+        "n": 2400,
+        "positives": 86,
+        "prevalence": 0.035833333333333335,
+        "average_precision": 0.488933267576866,
+        "roc_auc": 0.9098862334425438,
+        "recall_at_validation_threshold": 0.45348837209302323,
+        "observed_fpr": 0.006050129645635264,
+        "precision": 0.7358490566037735,
+        "threshold": 0.8345769047737122,
+        "confusion": {
+          "tn": 2300,
+          "fp": 14,
+          "fn": 47,
+          "tp": 39
+        }
+      },
+      "test": {
+        "n": 2400,
+        "positives": 89,
+        "prevalence": 0.037083333333333336,
+        "average_precision": 0.3572637043930069,
+        "roc_auc": 0.8759134379299782,
+        "recall_at_validation_threshold": 0.25842696629213485,
+        "observed_fpr": 0.008221549112938122,
+        "precision": 0.5476190476190477,
+        "threshold": 0.8345769047737122,
+        "confusion": {
+          "tn": 2292,
+          "fp": 19,
+          "fn": 66,
+          "tp": 23
+        },
+        "ap_iid_bootstrap_95ci": [
+          0.2621204009992991,
+          0.451575400426369
+        ]
+      },
+      "test_any_unseen_account": {
+        "n": 288,
+        "positives": 14,
+        "prevalence": 0.04861111111111111,
+        "average_precision": 0.3642744090610318,
+        "roc_auc": 0.8159541188738269,
+        "recall_at_validation_threshold": 0.35714285714285715,
+        "observed_fpr": 0.021897810218978103,
+        "precision": 0.45454545454545453,
+        "threshold": 0.8345769047737122,
+        "confusion": {
+          "tn": 268,
+          "fp": 6,
+          "fn": 9,
+          "tp": 5
+        }
+      },
+      "test_both_unseen_accounts": {
+        "n": 7,
+        "positives": 2,
+        "prevalence": 0.2857142857142857,
+        "average_precision": 0.6666666666666666,
+        "roc_auc": 0.6,
+        "recall_at_validation_threshold": 0.5,
+        "observed_fpr": 0.0,
+        "precision": 1.0,
+        "threshold": 0.8345769047737122,
+        "confusion": {
+          "tn": 5,
+          "fp": 0,
+          "fn": 1,
+          "tp": 1
+        }
+      },
+      "cpu_full_history_inference_seconds": 0.008487500000228465,
+      "cpu_amortized_ms_per_row": 0.0007072916666857054,
+      "test_scenarios": {
+        "account_takeover": {
+          "n": 28,
+          "positives": 28,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.03571428571428571,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.8345769047737122,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 27,
+            "tp": 1
+          }
+        },
+        "layering_ring": {
+          "n": 12,
+          "positives": 12,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.6666666666666666,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.8345769047737122,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 4,
+            "tp": 8
+          }
+        },
+        "legitimate_collection": {
+          "n": 18,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.0,
+          "precision": 0.0,
+          "threshold": 0.8345769047737122,
+          "confusion": {
+            "tn": 18,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "legitimate_large_payment": {
+          "n": 52,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.019230769230769232,
+          "precision": 0.0,
+          "threshold": 0.8345769047737122,
+          "confusion": {
+            "tn": 51,
+            "fp": 1,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "low_value_testing": {
+          "n": 13,
+          "positives": 13,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.8345769047737122,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 13,
+            "tp": 0
+          }
+        },
+        "mule_cashout": {
+          "n": 18,
+          "positives": 18,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.6666666666666666,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.8345769047737122,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 6,
+            "tp": 12
+          }
+        },
+        "mule_funnel": {
+          "n": 18,
+          "positives": 18,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.1111111111111111,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.8345769047737122,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 16,
+            "tp": 2
+          }
+        },
+        "ordinary": {
+          "n": 1974,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.00911854103343465,
+          "precision": 0.0,
+          "threshold": 0.8345769047737122,
+          "confusion": {
+            "tn": 1956,
+            "fp": 18,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "recurring_payment": {
+          "n": 267,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.0,
+          "precision": 0.0,
+          "threshold": 0.8345769047737122,
+          "confusion": {
+            "tn": 267,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          }
+        }
+      }
+    },
+    "graphsage": {
+      "validation": {
+        "n": 2400,
+        "positives": 86,
+        "prevalence": 0.035833333333333335,
+        "average_precision": 0.502734183774109,
+        "roc_auc": 0.9128962231914935,
+        "recall_at_validation_threshold": 0.4418604651162791,
+        "observed_fpr": 0.008210890233362144,
+        "precision": 0.6666666666666666,
+        "threshold": 0.5882964730262756,
+        "confusion": {
+          "tn": 2295,
+          "fp": 19,
+          "fn": 48,
+          "tp": 38
+        }
+      },
+      "test": {
+        "n": 2400,
+        "positives": 89,
+        "prevalence": 0.037083333333333336,
+        "average_precision": 0.35225918983974025,
+        "roc_auc": 0.8374408665930893,
+        "recall_at_validation_threshold": 0.24719101123595505,
+        "observed_fpr": 0.0099524015577672,
+        "precision": 0.4888888888888889,
+        "threshold": 0.5882964730262756,
+        "confusion": {
+          "tn": 2288,
+          "fp": 23,
+          "fn": 67,
+          "tp": 22
+        },
+        "ap_iid_bootstrap_95ci": [
+          0.2575909948371754,
+          0.4590461590370205
+        ]
+      },
+      "test_any_unseen_account": {
+        "n": 288,
+        "positives": 14,
+        "prevalence": 0.04861111111111111,
+        "average_precision": 0.5055263820512165,
+        "roc_auc": 0.9090198123044839,
+        "recall_at_validation_threshold": 0.35714285714285715,
+        "observed_fpr": 0.01824817518248175,
+        "precision": 0.5,
+        "threshold": 0.5882964730262756,
+        "confusion": {
+          "tn": 269,
+          "fp": 5,
+          "fn": 9,
+          "tp": 5
+        }
+      },
+      "test_both_unseen_accounts": {
+        "n": 7,
+        "positives": 2,
+        "prevalence": 0.2857142857142857,
+        "average_precision": 0.75,
+        "roc_auc": 0.8,
+        "recall_at_validation_threshold": 0.5,
+        "observed_fpr": 0.0,
+        "precision": 1.0,
+        "threshold": 0.5882964730262756,
+        "confusion": {
+          "tn": 5,
+          "fp": 0,
+          "fn": 1,
+          "tp": 1
+        }
+      },
+      "cpu_full_history_inference_seconds": 0.18830350000007456,
+      "cpu_amortized_ms_per_row": 0.015691958333339546,
+      "test_scenarios": {
+        "account_takeover": {
+          "n": 28,
+          "positives": 28,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.03571428571428571,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.5882964730262756,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 27,
+            "tp": 1
+          }
+        },
+        "layering_ring": {
+          "n": 12,
+          "positives": 12,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.4166666666666667,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.5882964730262756,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 7,
+            "tp": 5
+          }
+        },
+        "legitimate_collection": {
+          "n": 18,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.0,
+          "precision": 0.0,
+          "threshold": 0.5882964730262756,
+          "confusion": {
+            "tn": 18,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "legitimate_large_payment": {
+          "n": 52,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.057692307692307696,
+          "precision": 0.0,
+          "threshold": 0.5882964730262756,
+          "confusion": {
+            "tn": 49,
+            "fp": 3,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "low_value_testing": {
+          "n": 13,
+          "positives": 13,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.0,
+          "observed_fpr": null,
+          "precision": 0.0,
+          "threshold": 0.5882964730262756,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 13,
+            "tp": 0
+          }
+        },
+        "mule_cashout": {
+          "n": 18,
+          "positives": 18,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.7777777777777778,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.5882964730262756,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 4,
+            "tp": 14
+          }
+        },
+        "mule_funnel": {
+          "n": 18,
+          "positives": 18,
+          "prevalence": 1.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": 0.1111111111111111,
+          "observed_fpr": null,
+          "precision": 1.0,
+          "threshold": 0.5882964730262756,
+          "confusion": {
+            "tn": 0,
+            "fp": 0,
+            "fn": 16,
+            "tp": 2
+          }
+        },
+        "ordinary": {
+          "n": 1974,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.010131712259371834,
+          "precision": 0.0,
+          "threshold": 0.5882964730262756,
+          "confusion": {
+            "tn": 1954,
+            "fp": 20,
+            "fn": 0,
+            "tp": 0
+          }
+        },
+        "recurring_payment": {
+          "n": 267,
+          "positives": 0,
+          "prevalence": 0.0,
+          "average_precision": null,
+          "roc_auc": null,
+          "recall_at_validation_threshold": null,
+          "observed_fpr": 0.0,
+          "precision": 0.0,
+          "threshold": 0.5882964730262756,
+          "confusion": {
+            "tn": 267,
+            "fp": 0,
+            "fn": 0,
+            "tp": 0
+          }
+        }
+      }
+    }
+  },
+  "split_counts": {
+    "train": {
+      "total": 7200,
+      "labeled": 7200,
+      "fraud": 176
+    },
+    "validation": {
+      "total": 2400,
+      "labeled": 2400,
+      "fraud": 86
+    },
+    "test": {
+      "total": 2400,
+      "labeled": 2400,
+      "fraud": 89
+    }
+  },
+  "selected_by_validation_ap": "baseline_graph_features"
+}

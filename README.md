@@ -1,4 +1,23 @@
-# Graph Neural Network for Fraud and Anomaly Detection
+# Live Card-Payment Fraud Review + Graph Research
+
+Version 0.2 adds an authenticated HTTP service, durable incremental scoring, live synthetic replay,
+an analyst case queue, audit history, model/dataset integrity checks, drift monitoring, and deployment tooling.
+The complete operating guide is [docs/LIVE_OPERATIONS.md](docs/LIVE_OPERATIONS.md); measured evidence is
+in [docs/LIVE_RESULTS.md](docs/LIVE_RESULTS.md). The original research benchmark remains below.
+
+Start the prepared live system in separate terminals:
+
+```powershell
+python scripts/start_live.py api
+python scripts/start_live.py dashboard
+python scripts/start_live.py replay --limit 200 --rate 2
+```
+
+Open [Payment Operations](http://127.0.0.1:8502) or [API documentation](http://127.0.0.1:8000/docs).
+This is a measured single-host operational pilot; production payment authorization, high availability,
+and institution-specific accuracy require additional validation. Credentials and live databases remain private.
+
+# Research benchmark
 
 A Python research application that detects **suspicious transactions** using historical
 account interactions. It compares supervised tabular models, engineered graph features,

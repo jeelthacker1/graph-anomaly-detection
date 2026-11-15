@@ -4,13 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "graph-anomaly-detection"
-version = "0.1.0"
+version = "0.2.0"
 description = "Causal transaction graphs, fraud benchmarks, and investigation dashboard"
 requires-python = ">=3.11"
 dependencies = [
   "numpy>=2.0,<3", "pandas>=2.2,<3", "scikit-learn>=1.6,<2",
   "networkx>=3.4,<4", "joblib>=1.4,<2", "threadpoolctl>=3.5,<4", "torch>=2.6,<3",
-  "torch-geometric>=2.6,<3", "streamlit>=1.53,<2", "plotly>=6,<7"
+  "torch-geometric>=2.6,<3", "streamlit>=1.53,<2", "plotly>=6,<7",
+  "fastapi>=0.115,<1", "pydantic>=2.10,<3", "uvicorn>=0.30,<1", "httpx>=0.28,<1"
 ]
 
 [project.optional-dependencies]
@@ -27,3 +28,6 @@ testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 110
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query"]

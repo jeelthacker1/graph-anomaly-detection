@@ -1,0 +1,10 @@
+{
+  "sent": 200,
+  "succeeded": 200,
+  "failures": [],
+  "duplicates": 0,
+  "review": 24,
+  "http_p50_ms": 19.595549999962714,
+  "http_p95_ms": 103.54136000003105,
+  "note": "Time-compressed replay is an operational test, not an accuracy benchmark."
+}

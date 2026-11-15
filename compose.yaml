@@ -1,0 +1,44 @@
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      FRAUD_KEYS_JSON: ${FRAUD_KEYS_JSON:?Run python scripts/configure_live.py --compose first}
+      FRAUD_EXPECTED_MODEL_SHA256: ${FRAUD_EXPECTED_MODEL_SHA256:?Set model fingerprint}
+    volumes:
+      - payment-state:/app/state
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+  dashboard:
+    build: .
+    command: ["streamlit","run","live_app.py","--server.address","0.0.0.0","--server.port","8502","--server.headless","true","--browser.gatherUsageStats","false"]
+    ports:
+      - "127.0.0.1:8502:8502"
+    environment:
+      FRAUD_API_URL: http://api:8000
+      FRAUD_DASHBOARD_TOKEN: ${FRAUD_DASHBOARD_TOKEN:?Set analyst credential}
+      HOME: /tmp
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    depends_on:
+      api:
+        condition: service_healthy
+volumes:
+  payment-state:

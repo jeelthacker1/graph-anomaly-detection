@@ -1,0 +1,13 @@
+# Core compatibility constraints, not a complete transitive/hash lockfile.
+numpy==2.3.0
+pandas==2.2.3
+scikit-learn==1.9.1
+torch==2.15.0
+torch-geometric==2.8.1
+networkx==3.7
+streamlit==1.67.0
+plotly==6.9.0
+fastapi==0.163.1
+pydantic==2.14.3
+httpx==0.28.1
+uvicorn==0.54.0

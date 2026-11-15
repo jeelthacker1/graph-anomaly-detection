@@ -17,3 +17,15 @@ runs/*
 *.pt
 !runs/demo/*.joblib
 !runs/demo/*.pt
+
+state/
+.local-live.json
+*.sqlite
+*.sqlite-*
+!data/payments/
+data/payments/*
+!data/payments/demo.jsonl
+!data/payments/demo.manifest.json
+!runs/payments/
+!runs/payments/*.joblib
+!runs/payments/*.pt

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Preserve reviewed dataset/model bytes so SHA-256 checks survive every checkout.
+data/** -text
+runs/** -text

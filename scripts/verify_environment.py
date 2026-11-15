@@ -2,6 +2,7 @@
 import os
 import subprocess
 import tempfile
+import tomllib
 import venv
 from pathlib import Path
 
@@ -16,11 +17,11 @@ def run(*args):
     subprocess.run([str(python), *args], cwd=workspace, check=True)
 
 
-run("-m", "pip", "install", "--no-compile", "scikit-learn>=1.6,<2", "networkx>=3.4,<4", "torch>=2.6,<3",
-    "torch-geometric>=2.6,<3", "streamlit>=1.53,<2", "plotly>=6,<7")
+project = tomllib.loads((workspace / "pyproject.toml").read_text(encoding="utf-8"))["project"]
+run("-m", "pip", "install", "--no-compile", "-c", str(workspace / "constraints-serving.txt"),
+    *project["dependencies"], *project["optional-dependencies"]["dev"])
 run("-m", "pytest", "-q", "-p", "no:cacheprovider", "--basetemp", str(scratch / "tests"))
 run("-m", "fraudgraph.cli", "generate", "--rows", "2000", "--output", str(scratch / "demo.csv"))
 run("-m", "fraudgraph.cli", "train", str(scratch / "demo.csv"), "--output", str(scratch / "run"),
     "--epochs", "40", "--bootstrap", "100")
-run("-m", "pip", "freeze")
 print(f"VERIFICATION COMPLETE: {scratch}", flush=True)

@@ -1,0 +1,20 @@
+{
+  "schema": "payment-simulation-v1",
+  "rows": 18000,
+  "seed": 42,
+  "sha256": "a68c31e00f71dfecf6bae0c904ef4be071b0e019ea19467925b6af45c3eaf522",
+  "synthetic": true,
+  "provenance": "Locally generated; no real cardholder data",
+  "positives": 1058,
+  "scenarios": {
+    "account_takeover": 172,
+    "card_testing": 648,
+    "family_shared_device": 602,
+    "legitimate_checkout_burst": 615,
+    "legitimate_large_purchase": 407,
+    "legitimate_travel": 544,
+    "merchant_ring": 200,
+    "ordinary": 14774,
+    "stolen_card": 38
+  }
+}

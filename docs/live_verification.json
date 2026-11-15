@@ -1,0 +1,83 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.13.3",
+  "count": 200,
+  "concurrency": 8,
+  "model_version": "d43dac246fe693eb52dd958d3d7e16c21ca7cc434c13220900c1fb5e576868d3",
+  "dataset_sha256": "a68c31e00f71dfecf6bae0c904ef4be071b0e019ea19467925b6af45c3eaf522",
+  "successful": 200,
+  "status_counts": {
+    "200": 200
+  },
+  "wall_seconds": 5.137855300000183,
+  "observed_requests_per_second": 38.9267482873628,
+  "http_p50_ms": 195.06525000008423,
+  "http_p95_ms": 289.761939999903,
+  "http_max_ms": 424.7038999999404,
+  "concurrent_retries_deduplicated": 20,
+  "stale_review_conflict_rejected": true,
+  "statistics": {
+    "payments": 200,
+    "cases": {
+      "investigating": 1,
+      "open": 23
+    },
+    "recent_sample": 200,
+    "scoring_p50_ms": 177.13424999988092,
+    "scoring_p95_ms": 268.43310000006113,
+    "model": "relational",
+    "model_version": "d43dac246fe693eb52dd958d3d7e16c21ca7cc434c13220900c1fb5e576868d3",
+    "drift_status": "review",
+    "drift": [
+      {
+        "feature": "merchant_cards",
+        "psi": 13.285216090765955
+      },
+      {
+        "feature": "card_gap_minutes",
+        "psi": 13.013663218586945
+      },
+      {
+        "feature": "merchant_count",
+        "psi": 13.012647624706783
+      },
+      {
+        "feature": "card_count",
+        "psi": 11.25433212739296
+      },
+      {
+        "feature": "ip_count",
+        "psi": 11.086556317292333
+      },
+      {
+        "feature": "weekday_sin",
+        "psi": 10.625237967193897
+      },
+      {
+        "feature": "hour_sin",
+        "psi": 10.050777595146535
+      },
+      {
+        "feature": "hour_cos",
+        "psi": 10.035859340268583
+      },
+      {
+        "feature": "card_merchants",
+        "psi": 9.433508454981181
+      },
+      {
+        "feature": "weekday_cos",
+        "psi": 8.27887588643146
+      }
+    ],
+    "quality_note": "Review dispositions are selected feedback, not unbiased fraud accuracy."
+  },
+  "audit": {
+    "valid": true,
+    "rows": 201,
+    "head": "5f5abf52226701586d6d0b5e1b2d1edd971e3642fb25cb355ac56149234be9b1"
+  },
+  "restart_preserved_score_and_idempotency": true,
+  "consistent_backup_verified": true,
+  "scope": "Single-host bounded synthetic load, not a sustained throughput or production SLA claim."
+}
